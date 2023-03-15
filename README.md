@@ -11,6 +11,11 @@
 
 This web app was built as a coursework group project in 2023.
 
+## Features
+
+There are lots of included features, like:
+
+
 ## Installation
 
 **1. Clone this repository :**
@@ -31,11 +36,6 @@ rm -rf .git && git init && npm init
 ```sh
 npm install
 ```
-
-## Features
-
-There are lots of included features, like:
-
 
 ## Sources/References
 
