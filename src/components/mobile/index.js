@@ -1,56 +1,31 @@
-// import preact
 import { h, Component } from 'preact';
 
-// import jquery for API calls
-import $ from 'jquery';
+import { Router, route } from 'preact-router';
 
 import HomeScreen from '../homescreen';
+import Settings from '../settings';
+import Crops from '../crops';
+import Forecast from '../forecast';
 
-
+const Main = () => {
+	
+}
 
 export default class Mobile extends Component {
 
 	constructor(props) {
 		super(props);
-
-		this.screen = "home"
 	}
 
 	render() {
-		if (this.screen == 'home') {
-			return (
-
-				<div class="app">
-						<HomeScreen/>
-				</div>
-	
-			)
-		} else if (this.screen == "settings"){
-			return (
-
-				<div class="app">
-						<HomeScreen/>
-				</div>
-	
-			)
-		} else if (this.screen == "crops"){
-			return (
-
-				<div class="app">
-						<HomeScreen/>
-				</div>
-	
-			)
-		} else if (this.screen == "forecast"){
-			return (
-
-				<div class="app">
-						<HomeScreen/>
-				</div>
-	
-			)
-		}
-		
+		return (
+			<Router>
+				<HomeScreen path="/"/>
+				<Settings path="/settings"/>
+				<Crops path="/crops"/>
+				<Forecast path="/forecast"/>
+			</Router>
+		)
 	}
 
 }
