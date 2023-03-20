@@ -6,7 +6,6 @@ export default class Crops extends Component {
 
 	constructor(props) {
 		super(props);
-
 	}
 
 	render() {
@@ -16,5 +15,4 @@ export default class Crops extends Component {
 			</div>
 		)
 	}
-
 }

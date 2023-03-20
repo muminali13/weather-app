@@ -20,10 +20,10 @@ export default class Mobile extends Component {
 	render() {
 		return (
 			<Router>
-				<HomeScreen path="/"/>
 				<Settings path="/settings"/>
 				<Crops path="/crops"/>
 				<Forecast path="/forecast"/>
+				<HomeScreen default/>
 			</Router>
 		)
 	}

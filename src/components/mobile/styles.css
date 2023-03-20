@@ -19,6 +19,8 @@ p {
     height: 100vh;
     position: relative;
 
+    padding: 1em;
+
     color: white;
     background-color: rgba(0, 0, 0, 0.4);
 }

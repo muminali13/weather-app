@@ -5,8 +5,6 @@ import Mobile from './mobile';
 export default class App extends Component {
 
 	render() {
-
-		return (  <Mobile/>  );
-		
+		return (<Mobile/>);
 	}
 }
