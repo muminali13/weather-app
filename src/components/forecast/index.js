@@ -32,6 +32,7 @@ export default class Forecast extends Component {
 		return (
 			<div className="app">
 				<h1>Forecast</h1>
+				<a href='../' class="button">&#8592; Home</a>
 			</div>
 		)
 	}

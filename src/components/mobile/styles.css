@@ -22,13 +22,12 @@ p {
     padding: 1em;
 
     color: white;
-    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .app::before {
     content: '';
     background: url('../../assets/backgrounds/sunset-over-field-iphone.jpg') no-repeat center center/cover;
-    position: absolute;
+    position: fixed;
 
     width: 100%;
     height: 100%;
@@ -39,9 +38,9 @@ p {
 
 .container {
     max-width: 700px;
-    height: 700px;
+    min-height: 700px;
     margin: auto;
-    padding: 0 1rem;
+    padding: 1em;
     position: relative;
     top: 10%;
     display: flex;
@@ -53,6 +52,7 @@ section {
     width: 100%;
     border-radius: 10px;
     padding: 0.5em;
+    margin: 1em;
     background-color: rgba(0, 0, 0, 0.4);
 }
 
@@ -79,4 +79,50 @@ section {
 
 .crops-overview {
     text-align: center;
+}
+
+.crops-overview a {
+    float: right;
+}
+
+.stats-overview a {
+    float: right;
+}
+
+.stats-container {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.stats-overview h1 {
+    margin-bottom: 1em;
+}
+
+.stat-box {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 1em;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.stat-box h2 {
+    font-size: 1em;
+}
+
+.stat-box p {
+    font-size: 2em;
+}
+
+.button {
+    text-decoration: none;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.crop-button img {
+    width: 20%;
 }

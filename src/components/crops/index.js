@@ -12,6 +12,8 @@ export default class Crops extends Component {
 		return (
 			<div className="app">
 				<h1>Crops</h1>
+
+				<a href='../' class="button">&#8592; Home</a>
 			</div>
 		)
 	}

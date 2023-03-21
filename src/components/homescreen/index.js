@@ -50,18 +50,41 @@ export default class HomeScreen extends Component {
 						</div>
 					</section>
 					<section className="stats-overview">
-						<div className="feels">
-							<p>9°C</p>
+						<h1>
+							Today:
+							<a href='./forecast' class="button" id="view-forecast-button">&#8594;</a>
+						</h1>
+						<div class="stats-container">
+							<div className="stat-box feels">
+								<h2>Feels Like</h2>
+								<p>9°C</p>
+							</div>
+							<div className="stat-box humidity">
+								<h2>Humidity</h2>
+								<p>50%</p>
+							</div>
+							<div className="stat-box wind">
+								<h2>Windspeed</h2>
+								<p>12 MPH</p>
+							</div>
 						</div>
-						<div className="humidity">
-							<p>50%</p>
-						</div>
-						<div className="wind">
-							<p>12 MPH</p>
-						</div>
+						
+
 					</section>
 					<section class="crops-overview">
-						<p>My Crops</p>
+						<h2>
+							My Crops
+							<a href='./crops' class="button" id="view-all-crops-button">&#8594;</a>
+						</h2>
+						<div class="crop-button">
+							<img src='https://cdn-icons-png.flaticon.com/128/135/135695.png'></img>
+						</div>
+						<div class="crop-button">
+							<img src='https://cdn-icons-png.flaticon.com/128/135/135695.png'></img>
+						</div>
+						<div class="crop-button">
+							<img src='https://cdn-icons-png.flaticon.com/128/135/135695.png'></img>
+						</div>
 					</section>
 				</div>
 			</div>
