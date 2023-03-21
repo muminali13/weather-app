@@ -1,6 +1,7 @@
 // import preact
 import { h, Component } from 'preact';
 
+import NavBar from '../navbar';
 
 export default class Crops extends Component {
 
@@ -11,10 +12,9 @@ export default class Crops extends Component {
 	render() {
 		return (
 			<div className="app">
+				<NavBar name='My Crops'/>
 				<h1>Crops</h1>
 
-				<a href='../' class="button">&#8592; Home</a>
-				<a href='../' class="button">&#8592; Home</a>
 			</div>
 		)
 	}

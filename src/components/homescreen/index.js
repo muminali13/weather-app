@@ -4,6 +4,8 @@ import { h, Component } from 'preact';
 // import jquery for API calls
 import $ from 'jquery';
 
+import {FaSearchLocation} from 'react-icons/fa'
+
 
 export default class HomeScreen extends Component {
 
@@ -31,10 +33,13 @@ export default class HomeScreen extends Component {
 	render() {
 		return (
 			<div className="app">
-				<div className="search">
-
-				</div>
+				
 				<div className="container">
+					<div className="search">
+						<FaSearchLocation/>
+						Search locations...
+					</div>
+					
 					<section className="top">
 						<div className="left">
 							<div className="location">
@@ -68,9 +73,8 @@ export default class HomeScreen extends Component {
 								<p>12 MPH</p>
 							</div>
 						</div>
-						
-
 					</section>
+
 					<section class="crops-overview">
 						<h2>
 							My Crops
