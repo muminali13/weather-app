@@ -48,3 +48,35 @@ p {
     flex-direction: column;
     justify-content: space-between;
 }
+
+section {
+    width: 100%;
+    border-radius: 10px;
+    padding: 0.5em;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.top h1 {
+    float: right;
+    font-size: 3em;
+}
+
+.top .left {
+    float: left;
+}
+
+.location {
+    font-size: 0.75em;
+}
+
+.description {
+    font-size: 1.5em;
+}
+
+.temp {
+    margin: auto 0 auto 0;
+}
+
+.crops-overview {
+    text-align: center;
+}

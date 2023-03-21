@@ -35,18 +35,21 @@ export default class HomeScreen extends Component {
 
 				</div>
 				<div className="container">
-					<div className="top">
-						<div className="location">
-							<h1>London</h1>
+					<section className="top">
+						<div className="left">
+							<div className="location">
+								<h2>London</h2>
+							</div>
+
+							<div className="description">
+								<h2>Cloudy</h2>
+							</div>
 						</div>
 						<div className="temp">
-							<h2>12°C</h2>
+							<h1>12°C</h1>
 						</div>
-						<div className="description">
-							<p>Cloudy</p>
-						</div>
-					</div>
-					<div className="bottom">
+					</section>
+					<section className="stats-overview">
 						<div className="feels">
 							<p>9°C</p>
 						</div>
@@ -56,7 +59,10 @@ export default class HomeScreen extends Component {
 						<div className="wind">
 							<p>12 MPH</p>
 						</div>
-					</div>
+					</section>
+					<section class="crops-overview">
+						<p>My Crops</p>
+					</section>
 				</div>
 			</div>
 
