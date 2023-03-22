@@ -1,6 +1,5 @@
 // import preact
 import { h, Component } from 'preact';
-import { useState } from 'react';
 
 import NavBar from '../navbar';
 
@@ -12,17 +11,27 @@ export default class AddCrops extends Component {
 
 	state = {
 		cropName : "strawberries",
-		harvest : 100
+		harvest : 0
 	}
 
 	onChange = e =>{
 		console.log(e.target.val)
 		this.setState({[e.target.name] : e.target.value});
 	}
+
+	onSubmit = e =>{
+		e.preventDefault()
+		
+		this.setState({cropName : "Strawberries", harvest : "0"})
+		const crop = {cropName,harvest};
+		console.log(crop)
+	}
 	
 
 	render() {
 		const{cropName,harvest} = this.state;
+
+
 		return (
 			<div className="app">
 				<NavBar name='My Crops'/>
@@ -31,14 +40,14 @@ export default class AddCrops extends Component {
 					<div className="addCrop">
 						<h2>Add a New Crop: {cropName}</h2>
 						<h2>Harvest time: {harvest}</h2>
-						<form>
+						<form onSubmit={this.onSubmit}>
 							<label>Crop Name:</label><br/>
 							<div className="radio">
 								<input
 								type="radio"
-								value="strawberries"
+								value="Strawberries"
 								name="cropName"
-								checked={cropName === "strawberries"}
+								checked={cropName === "Strawberries"}
 								onChange={this.onChange}
 								/>
 								Strawberries
@@ -47,9 +56,9 @@ export default class AddCrops extends Component {
 							<div className="radio">
 								<input
 								type="radio"
-								value="corn"
+								value="Corn"
 								name="cropName"
-								checked={cropName === "corn"}
+								checked={cropName === "Corn"}
 								onChange={this.onChange}
 								/>
 								Corn
@@ -58,9 +67,9 @@ export default class AddCrops extends Component {
 							<div className="radio">
 								<input
 								type="radio"
-								value="carrots"
+								value="Carrots"
 								name="cropName"
-								checked={cropName === "carrots"}
+								checked={cropName === "Carrots"}
 								onChange={this.onChange}
 								/>
 								Carrots
@@ -69,9 +78,9 @@ export default class AddCrops extends Component {
 							<div className="radio">
 								<input
 								type="radio"
-								value="peas"
+								value="Peas"
 								name="cropName"
-								checked={cropName === "peas"}
+								checked={cropName === "Peas"}
 								onChange={this.onChange}
 								/>
 								Peas
@@ -80,16 +89,12 @@ export default class AddCrops extends Component {
 							<div className="radio">
 								<input
 								type="radio"
-								value="potatos"
+								value="Potatos"
 								name="cropName"
-								checked={cropName === "potatos"}
+								checked={cropName === "Potatos"}
 								onChange={this.onChange}
 								/>
 								Potatos
-							</div>
-							
-							<div>
-								Selected option is : {this.state.selectedOption}
 							</div>
 
 							<div>
@@ -103,7 +108,7 @@ export default class AddCrops extends Component {
 									required
 								/>
 								<br/>
-								<input type="submit" className="button"/>
+								<button type="submit" className="button">Add Crop</button>
 								
 							</div>
 							
