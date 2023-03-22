@@ -33,12 +33,15 @@ export default class HomeScreen extends Component {
 	render() {
 		return (
 			<div className="app">
-				
-				<div className="container">
+
+				<div class="header">
 					<div className="search">
-						<FaSearchLocation/>
-						Search locations...
+						<FaSearchLocation class="search-icon"/>
+						<input type='text' onfocus="this.value=''" placeholder="Search locations..."/>
 					</div>
+				</div>
+
+				<div className="container">
 					
 					<section className="top">
 						<div className="left">

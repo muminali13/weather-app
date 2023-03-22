@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
+:root {
+    font-size: 16px;
+}
+
 * {
     font-family: 'Poppins', sans-serif;
 
@@ -37,6 +41,7 @@ p {
 .container {
     width: 96%;
     margin: auto;
+    margin-top: 5rem;
 
     max-width: 700px;
     min-height: 700px;
@@ -49,8 +54,8 @@ p {
 
 section {
     border-radius: 10px;
-    padding: 0.5em;
-    margin: 1em;
+    padding: 0.5rem;
+    margin: 1rem;
     background-color: rgba(0, 0, 0, 0.4);
 }
 
@@ -159,20 +164,50 @@ section {
     border-radius: 5px;
 }
 
-/* --- Nav Bar ------------------------------------------------------------*/
-.nav-bar {
+/* --- Header ------------------------------------------------------------*/
+.header {
     width: 100%;
     position: fixed;
     background-color: rgb(184, 77, 15);
     padding: 1em;
+    z-index: 2;
+    top: 0;
 }
+
+/* --- Nav Bar ------------------------------------------------------------*/
 
 .nav-bar h1 {
     display: inline;
     margin-left: 10px;
+    height: 100%;
 }
 
 .nav-bar a {
     margin-top: 0;
+    height: 100%;
 }
 
+/* --- Search Bar ------------------------------------------------------------*/
+
+.search {
+    height: 3rem;
+    border-radius: 1em;
+    padding: 0.5rem;
+}
+
+.search-icon {
+    margin: auto auto auto 0.5rem;
+    float: left;
+    width: 1.5rem;
+    height: 100%;
+}
+
+input[type=text] {
+    background: none;
+    color: white;
+    width: calc(100% - 3rem);
+    margin-left: 0.7rem;
+    height: 100%;
+    padding: 0.5rem;
+    border-radius: 1em;
+}
