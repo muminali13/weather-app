@@ -130,6 +130,30 @@ section {
     width: 20%;
 }
 
+/* --- Add Crops ------------------------------------------------------------ */
+.addCrop{
+    border-radius: 10px;
+    padding: 0.5em;
+    margin: 1em;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.myCrops{
+    border-radius: 10px;
+    padding: 0.5em;
+    margin: 1em;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#crops{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#crops td, #crops th {
+    
+    padding: 8px;
+}
 /* --- Search Bar ------------------------------------------------------------*/
 
 .search {

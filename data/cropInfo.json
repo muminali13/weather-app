@@ -1,0 +1,14 @@
+{
+    "crops":[
+        {
+            "cropName": "Strawberries",
+            "harvest": 100,
+            "id": 1
+        },
+        {
+            "cropName": "Corn",
+            "harvest": 20,
+            "id": 2
+        }
+    ]
+}
