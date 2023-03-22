@@ -9,11 +9,6 @@
   "icons": [{
     "src": "./assets/icons/favicon-32x32.png",
     "type": "image/png",
-    "sizes": "192x192"
-  },
-  {
-    "src": "./assets/icons/favicon-32x32.png",
-    "type": "image/png",
-    "sizes": "512x512"
+    "sizes": "32x32"
   }]
 }

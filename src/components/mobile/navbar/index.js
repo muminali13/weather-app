@@ -23,10 +23,13 @@ export default class NavBar extends Component {
 
 	render() {
 		return (
-			<div className="nav-bar">
-				<a href='../' class="button">&#8592;</a>
-				<h1>{this.name}</h1>
+			<div class="header">
+				<div className="nav-bar">
+					<a href='../' class="button">&#8592;</a>
+					<h1>{this.name}</h1>
+				</div>
 			</div>
+
 		)
 	}
 

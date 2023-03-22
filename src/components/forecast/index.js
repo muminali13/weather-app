@@ -4,7 +4,7 @@ import { h, Component } from 'preact';
 // import jquery for API calls
 import $ from 'jquery';
 
-import NavBar from '../navbar';
+import NavBar from '../mobile/navbar';
 
 export default class Forecast extends Component {
 
@@ -33,10 +33,61 @@ export default class Forecast extends Component {
 		return (
 			<div className="app">
 				<NavBar name='Forecast'/>
-				<h1>The Next Week:</h1>
-				<a href='../' class="button">&#8592; Home</a>
 
+				<div className="container">
+
+					<h1>The Next Week:</h1>
 				
+					<table>
+						<tr>
+							<td>MON</td>
+							<td><img /></td>
+							<td>
+								<p>LOW 4</p>
+								<p>HIGH 4</p>
+							</td>
+						</tr>
+
+						<tr>
+							<td>TUE</td>
+							<td><img /></td>
+							<td>
+								<p>LOW 4</p>
+								<p>HIGH 4</p>
+							</td>
+						</tr>
+
+						<tr>
+							<td>WED</td>
+							<td><img /></td>
+							<td>
+								<p>LOW 4</p>
+								<p>HIGH 4</p>
+							</td>
+						</tr>
+
+						<tr>
+							<td>THU</td>
+							<td><img /></td>
+							<td>
+								<p>LOW 4</p>
+								<p>HIGH 4</p>
+							</td>
+						</tr>
+
+						<tr>
+							<td>FRI</td>
+							<td><img /></td>
+							<td>
+								<p>LOW 4</p>
+								<p>HIGH 4</p>
+							</td>
+						</tr>
+
+					</table>
+
+				</div>
+
 			</div>
 		)
 	}

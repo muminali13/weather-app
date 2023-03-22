@@ -1,7 +1,7 @@
 // import preact
 import { h, Component } from 'preact';
 
-import NavBar from '../navbar';
+import NavBar from '../mobile/navbar';
 
 export default class Crops extends Component {
 
