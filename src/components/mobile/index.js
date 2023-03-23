@@ -8,8 +8,22 @@ import Crops from '../crops';
 import Forecast from '../forecast';
 import AddCrops from '../AddCrops';
 
-const Main = () => {
-	
+function DefaultScreen() {
+
+	return (
+		<div className="app">
+			<div className="container">
+				<a href="./home" class="button" style={{
+					"width":"100%",
+					"height": "100%",
+					"padding": "1rem",
+					"text-align": "center",
+					"margin": "auto auto"
+				}}>Click to start!</a>
+			</div>
+		</div>
+		
+	)
 }
 
 export default class Mobile extends Component {
@@ -25,7 +39,8 @@ export default class Mobile extends Component {
 				<Crops path="/crops"/>
 				<Forecast path="/forecast"/>
 				<AddCrops path="/AddCrops"/>
-				<HomeScreen default/>
+				<HomeScreen path="/home"/>
+				<DefaultScreen default/>
 			</Router>
 		)
 	}

@@ -116,9 +116,6 @@ export default class AddCrops extends Component {
 					</div>
 				</div>
 				
-
-				<a href='./crops' className="button">&#8592; Crops</a>
-
 			</div>
 		)
 	}

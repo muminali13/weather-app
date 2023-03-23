@@ -25,7 +25,7 @@ export default class NavBar extends Component {
 		return (
 			<div class="header">
 				<div className="nav-bar">
-					<a href='../' class="button">&#8592;</a>
+					<a href='../home' class="button">&#8592;</a>
 					<h1>{this.name}</h1>
 				</div>
 			</div>

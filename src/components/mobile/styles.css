@@ -59,6 +59,8 @@ section {
     background-color: rgba(0, 0, 0, 0.4);
 }
 
+/* --- Homepage top ------------------------------------------------------------ */
+
 .top h1 {
     float: right;
     font-size: 3em;
@@ -79,6 +81,7 @@ section {
 .temp {
     margin: auto 0 auto 0;
 }
+/* --- Homepage Crops overview ------------------------------------------------------------ */
 
 .crops-overview {
     text-align: center;
@@ -87,6 +90,12 @@ section {
 .crops-overview a {
     float: right;
 }
+
+.crop-button img {
+    width: 20%;
+}
+
+/* --- Homepage Todays Stats ------------------------------------------------------------ */
 
 .stats-overview a {
     float: right;
@@ -126,9 +135,6 @@ section {
     padding: 5px;
 }
 
-.crop-button img {
-    width: 20%;
-}
 
 /* --- Add Crops ------------------------------------------------------------ */
 .addCrop{
