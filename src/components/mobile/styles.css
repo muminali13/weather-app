@@ -59,6 +59,22 @@ section {
     background-color: rgba(0, 0, 0, 0.4);
 }
 
+.button {
+    text-decoration: none;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    padding: 5px;
+    transition: all 200ms ease;
+}
+
+.button:hover {
+    text-decoration: none;
+    background-color: rgb(184, 77, 15, 0.4);
+    color: white;
+    border: white solid 1px;
+}
+
 /* --- Homepage top ------------------------------------------------------------ */
 
 .top h1 {
@@ -91,50 +107,84 @@ section {
     float: right;
 }
 
-.crop-button img {
-    width: 20%;
+.crops-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.crop-icon img {
+    width: 100%;
+    padding: 0.5rem;
 }
 
 /* --- Homepage Todays Stats ------------------------------------------------------------ */
 
-.stats-overview a {
-    float: right;
-}
-
 .stats-container {
-
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
 .stats-overview h1 {
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
+    text-align: center;
+
 }
 
 .stat-box {
     background-color: rgba(0, 0, 0, 0.4);
-    padding: 1em;
+    padding: 1rem 0.2rem;
+    border-radius: 5px;
+    text-align: center;
+    width: 33%;
+    min-width: 6rem;
+    
+}
+
+.stat-box h2 {
+    font-size: 1rem;
+}
+
+.stat-box p {
+    font-size: 1.5rem;
+}
+
+/* --- Homepage week Stats ------------------------------------------------------------ */
+
+.week-overview a {
+    float: right;
+}
+
+.week-container {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.week-overview h1 {
+    margin-bottom: 1rem;
+}
+
+.weekday-summary-box {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 0.2rem;
+    margin: 0.2rem;
     border-radius: 5px;
     text-align: center;
 }
 
-.stat-box h2 {
+.weekday-summary-box p {
     font-size: 1em;
 }
 
-.stat-box p {
-    font-size: 2em;
+.weekday-summary-box img {
+    width: 100%;
 }
-
-.button {
-    text-decoration: none;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.4);
-    border-radius: 5px;
-    padding: 5px;
-}
-
 
 /* --- Add Crops ------------------------------------------------------------ */
 .addCrop{
@@ -160,6 +210,7 @@ section {
     
     padding: 8px;
 }
+
 /* --- Search Bar ------------------------------------------------------------*/
 
 .search {
