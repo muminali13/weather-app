@@ -3,119 +3,122 @@ import { h, Component } from 'preact';
 
 import NavBar from '../mobile/navbar';
 
+
 export default class AddCrops extends Component {
 
 	constructor(props) {
 		super(props);
 	}
 
-	state = {
-		cropName : "strawberries",
-		harvest : 0
+	onSelectionChange = e => {
+		console.log(e)
+		this.setState({ 
+			cropName: e.target.value,
+		});
 	}
 
-	onChange = e =>{
-		console.log(e.target.val)
-		this.setState({[e.target.name] : e.target.value});
+	onTimeChange = e => {
+		console.log(e)
+		this.setState({ 
+			harvest: e.target.value,
+		});
 	}
 
-	onSubmit = e =>{
+	onSubmit = e => {
 		e.preventDefault()
-		
-		this.setState({cropName : "Strawberries", harvest : "0"})
-		const crop = {cropName,harvest};
-		console.log(crop)
+		console.log(this.state)
+
+		// let res = http.put('../../data/cropInfo.json', this.state)
+
+		this.setState({ cropName: "Strawberries", harvest: "0" })
 	}
-	
+
 
 	render() {
-		const{cropName,harvest} = this.state;
-
-
 		return (
 			<div className="app">
-				<NavBar name='My Crops'/>
+				<NavBar name='My Crops' />
 				<div className="container">
-					
+
 					<div className="addCrop">
-						<h2>Add a New Crop: {cropName}</h2>
-						<h2>Harvest time: {harvest}</h2>
+						<h2>Adding Crop: {this.state.cropName}</h2>
+						<h2>Harvest in: {this.state.harvest} days</h2>
 						<form onSubmit={this.onSubmit}>
-							<label>Crop Name:</label><br/>
+							<label>Crop Name:</label><br />
 							<div className="radio">
 								<input
-								type="radio"
-								value="Strawberries"
-								name="cropName"
-								checked={cropName === "Strawberries"}
-								onChange={this.onChange}
+									type="radio"
+									value="Strawberries"
+									name="cropName"
+									checked={this.state.cropName === "Strawberries"}
+									onChange={this.onSelectionChange}
 								/>
 								Strawberries
 							</div>
-							
+
 							<div className="radio">
 								<input
-								type="radio"
-								value="Corn"
-								name="cropName"
-								checked={cropName === "Corn"}
-								onChange={this.onChange}
+									type="radio"
+									value="Corn"
+									name="cropName"
+									checked={this.state.cropName === "Corn"}
+									onChange={this.onSelectionChange}
 								/>
 								Corn
 							</div>
-							
+
 							<div className="radio">
 								<input
-								type="radio"
-								value="Carrots"
-								name="cropName"
-								checked={cropName === "Carrots"}
-								onChange={this.onChange}
+									type="radio"
+									value="Carrots"
+									name="cropName"
+									checked={this.state.cropName === "Carrots"}
+									onChange={this.onSelectionChange}
 								/>
 								Carrots
 							</div>
-							
+
 							<div className="radio">
 								<input
-								type="radio"
-								value="Peas"
-								name="cropName"
-								checked={cropName === "Peas"}
-								onChange={this.onChange}
+									type="radio"
+									value="Peas"
+									name="cropName"
+									checked={this.state.cropName === "Peas"}
+									onChange={this.onSelectionChange}
 								/>
 								Peas
 							</div>
 
 							<div className="radio">
 								<input
-								type="radio"
-								value="Potatos"
-								name="cropName"
-								checked={cropName === "Potatos"}
-								onChange={this.onChange}
+									type="radio"
+									value="Potatos"
+									name="cropName"
+									checked={this.state.cropName === "Potatos"}
+									onChange={this.onSelectionChange}
 								/>
 								Potatos
 							</div>
 
 							<div>
-								<label>Harvest time:</label><br/>
-								<input 
-									type="number" 
-									value={harvest} 
-									name="harvest" 
-									onChange={this.onChange}
-									min="1" 
+								<label>Harvest time:</label><br />
+								<input
+									type="number"
+									value={this.state.harvest}
+									name="harvest"
+									onChange={this.onTimeChange}
+									min="1"
 									required
 								/>
-								<br/>
+								<br />
 								<button type="submit" className="button">Add Crop</button>
-								
+
 							</div>
-							
+
 						</form>
 					</div>
 				</div>
-				
+
 			</div>
 		)
 	}

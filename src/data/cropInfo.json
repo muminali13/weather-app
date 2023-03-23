@@ -9,6 +9,16 @@
             "cropName": "Corn",
             "harvest": 20,
             "id": 2
+        },
+        {
+            "cropName": "Apple",
+            "harvest": 14,
+            "id": 3
+        },
+        {
+            "cropName": "Wheat",
+            "harvest": 66,
+            "id": 4
         }
     ]
 }

@@ -13,47 +13,46 @@ export default class HomeScreen extends Component {
 	constructor(props) {
 		super(props);
 
-		this.onSearch = this.onSearch.bind(this);
-
 		this.state.location = "London"
-		// const [data, setData] = useState({})
-		// const [location, setLocation] = useState(``)
 
 		this.fetchWeatherData()
-		this.fetchForecastData()
+
+		this.onSearch = this.onSearch.bind(this);
 	}
 
 	// a call to fetch weather data via wunderground
 	fetchWeatherData = () => {
-		var url = `https://api.openweathermap.org/data/2.5/weather?q=${this.state.location},uk&units=metric&APPID=5dd07d3033c59fcd9afe226989a8fdbc`;
-		$.ajax({
-			url: url,
-			dataType: "json",
-			success: (parsed_json) => {
-				this.setState({
-					location: parsed_json.name,
-					temperature: parsed_json.main.temp,
-					conditions: parsed_json.weather[0].description,
-					feelsLike: parsed_json.main.feels_like,
-					humidiy: parsed_json.main.humidity,
-					windspeed: parsed_json.wind.speed
-				})},
-			error: function(req, err) { 
-				console.log('API call failed ' + err);
-				window.alert("Couldn't get data for city: " + this.state.location)
-			}
-		})
-	}
+		var weekdays = ["SUN","MON","TUE","WED","THU","FRI","SAT"];
 
-	fetchForecastData = () => {
-		var url = `https://api.openweathermap.org/data/2.5/forecast?q=${this.state.location},uk&cnt=5&APPID=5dd07d3033c59fcd9afe226989a8fdbc`;
+		var url = `https://api.openweathermap.org/data/2.5/forecast?q=${this.state.location},uk&units=metric&APPID=5dd07d3033c59fcd9afe226989a8fdbc`;
 		$.ajax({
 			url: url,
 			dataType: "json",
 			success: (parsed_json) => {
 				this.setState({
-					forecast: parsed_json.list
+
+					forecastDay1_day: weekdays[new Date(parsed_json.list[0].dt_txt).getDay()],
+					forecastDay1_icon: parsed_json.list[0].weather[0].icon,
+					
+					forecastDay2_day: weekdays[new Date(parsed_json.list[8].dt_txt).getDay()],
+					forecastDay2_icon: parsed_json.list[8].weather[0].icon,
+					
+					forecastDay3_day: weekdays[new Date(parsed_json.list[16].dt_txt).getDay()],
+					forecastDay3_icon: parsed_json.list[16].weather[0].icon,
+					
+					forecastDay4_day: weekdays[new Date(parsed_json.list[24].dt_txt).getDay()],
+					forecastDay4_icon: parsed_json.list[24].weather[0].icon,
+					
+					forecastDay5_day: weekdays[new Date(parsed_json.list[32].dt_txt).getDay()],
+					forecastDay5_icon: parsed_json.list[32].weather[0].icon,
+					
+					temperature: parsed_json.list[0].main.temp,
+					conditions: parsed_json.list[0].weather[0].description,
+					feelsLike: parsed_json.list[0].main.feels_like,
+					humidiy: parsed_json.list[0].main.humidity,
+					windspeed: parsed_json.list[0].wind.speed
 				})},
+
 			error: function(req, err) { 
 				console.log('API call failed ' + err);
 				window.alert("Couldn't get data for city: " + this.state.location)
@@ -66,6 +65,7 @@ export default class HomeScreen extends Component {
 			let l = document.getElementById("search-textfield").value
 			console.log(`Get data for: ${l}`)
 			this.state.location = l;
+
 			this.fetchWeatherData()
 		}
 	}
@@ -122,28 +122,24 @@ export default class HomeScreen extends Component {
 						</h1>
 						<div class="week-container">
 							<div className="weekday-summary-box">
-								<p>FRI</p>
-								<img src="../../../assets/weather-icons/very-cold.png"></img>
+								<p>{this.state.forecastDay1_day}</p>
+								<img src={`../../../assets/weather-icons/${this.state.forecastDay1_icon}.png`}></img>
 							</div>
 							<div className="weekday-summary-box">
-								<p>SAT</p>
-								<img src="../../../assets/weather-icons/icy.png"></img>
+								<p>{this.state.forecastDay2_day}</p>
+								<img src={`../../../assets/weather-icons/${this.state.forecastDay2_icon}.png`}></img>
 							</div>
 							<div className="weekday-summary-box">
-								<p>SUN</p>
-								<img src="../../../assets/weather-icons/raindrops.png"></img>
+								<p>{this.state.forecastDay3_day}</p>
+								<img src={`../../../assets/weather-icons/${this.state.forecastDay3_icon}.png`}></img>
 							</div>
 							<div className="weekday-summary-box">
-								<p>MON</p>
-								<img src="../../../assets/weather-icons/wind.png"></img>
+								<p>{this.state.forecastDay4_day}</p>
+								<img src={`../../../assets/weather-icons/${this.state.forecastDay4_icon}.png`}></img>
 							</div>
 							<div className="weekday-summary-box">
-								<p>TUE</p>
-								<img src="../../../assets/weather-icons/cloudy-sunny.png"></img>
-							</div>
-							<div className="weekday-summary-box">
-								<p>WED</p>
-								<img src="../../../assets/weather-icons/sunny.png"></img>
+								<p>{this.state.forecastDay5_day}</p>
+								<img src={`../../../assets/weather-icons/${this.state.forecastDay5_icon}.png`}></img>
 							</div>
 						</div>
 					</section>
