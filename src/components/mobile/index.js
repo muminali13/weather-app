@@ -23,7 +23,7 @@ function DefaultScreen() {
 						"padding-bottom":"1rem"
 					}
 				}>
-					<h1 style={{"font-size":"10rem"}}>{`${currentDate.getHours()}:${currentDate.getMinutes()}`}</h1>
+					<h1 style={{"font-size":"10rem"}}>{`${currentDate.getHours()}:${("00" + currentDate.getMinutes()).slice(-2)}`}</h1>
 					<h2 style={{"font-size":"2rem"}}>{`${weekdays[currentDate.getDay()]} ${currentDate.getDate()}/${currentDate.getMonth()}/${currentDate.getFullYear()}`}</h2>
 
 				</div>
